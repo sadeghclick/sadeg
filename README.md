@@ -28,13 +28,11 @@ local function run(msg, matches)
     city = matches[1]
   local wtext = get_weather(city)
   if not wtext then
-  wtext = 'مکان وارد شده صحیح نیست'
+    wtext = 'مکان وارد شده صحیح نیست'
   end
   return wtext
 end
-
 return {
-
   patterns = {
    "^[!/]weather (.*)$",
     },
